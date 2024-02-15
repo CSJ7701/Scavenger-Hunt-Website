@@ -10,6 +10,24 @@
     <header>
         <h1>Mental Health Resources</h1>
     </header>
+
+    <script>
+      window.onload=function generateVerNum() {
+	  const base=1234;
+	  const mult=Math.floor(Math.random() * 9) +1;
+	  const newbase=base * mult;
+	  const add = mult.toString();
+	  var final=newbase + add;
+	  console.log("base: " + newbase)
+	  console.log("mult: " + mult)
+	  console.log(final)
+	  /*document.getElementById("verificationNumber").value=final;
+	    document.body.innerHTML=document.body.innerHTML.replace('123456', $final);*/
+	  document.getElementById("num").innerText=final;
+      }
+    </script>
+
+    
     <main>
         <div class="content">
             <h2>About Us</h2>
@@ -17,9 +35,9 @@
 
 Volutpat blandit aliquam etiam erat velit scelerisque in. Ut etiam sit amet nisl purus in mollis nunc sed. Maecenas pharetra convallis posuere morbi leo urna molestie. Fringilla est ullamcorper eget nulla. Ornare arcu dui vivamus arcu. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Nisl vel pretium lectus quam id leo in. Nunc faucibus a pellentesque sit. Vivamus at augue eget arcu. Placerat in egestas erat imperdiet sed euismod. Turpis egestas maecenas pharetra convallis posuere morbi. Non quam lacus suspendisse faucibus. Risus pretium quam vulputate dignissim suspendisse. Urna cursus eget nunc scelerisque viverra mauris in. Massa enim nec dui nunc mattis. Ut tortor pretium viverra suspendisse potenti nullam. Morbi quis commodo odio aenean sed. Lectus sit amet est placerat in. Id leo in vitae turpis massa sed.</p>
         </div>
-	<div class="content">
+	<div class="content" onload="generateVerNum()">
 	  <p><b>Location: </b> Chapel</p>
-	  <p><b>Code: </b>123456</p>
+	  <p><b>Code: </b><u id="num">23456</u></p>
 	</div>
     </main>
     <footer>
